@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
+
+Route::get('/hello/{name?}',function($name="Laravel"){
+    return "Hello {$name}!";
+});
